@@ -12,6 +12,7 @@ typedef unsigned int int32;
 typedef unsigned short int16;
 typedef unsigned char int8;
 
+// Nó
 struct s_node { // links
     struct s_node *north;
     struct s_node *west;
@@ -29,3 +30,9 @@ struct s_leaf {
     int16 size; // Tamanho do valor(value)
 };
 typedef struct s_leaf Leaf;
+
+union u_tree {
+    Node n;
+    Leaf l;
+};
+typedef union u_tree Tree;
